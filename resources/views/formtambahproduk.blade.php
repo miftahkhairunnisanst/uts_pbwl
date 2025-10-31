@@ -98,12 +98,13 @@
         </div>
         <div class="col-md-4">
           <label class="form-label">Jenis Produk</label>
-          <select name="jenis" class="form-select">
-            <option value="">Pilih Produk</option>
-            <option value="Alat tulis">Alat tulis</option>
-            <option value="Elektronik">Elektronik</option>
-            <option value="Pakaian">Pakaian</option>
-          </select>
+        <select name="jenis" class="form-select" required>
+            <option value="">Pilih Jenis Produk</option>
+            @for ($i = 0; $i < count($jenisProduk); $i++)
+            <option value="{{ $jenisProduk[$i] }}">{{ $jenisProduk[$i] }}</option>
+            @endfor
+        </select>
+
         </div>
       </div>
 

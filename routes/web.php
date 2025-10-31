@@ -17,5 +17,7 @@ Route::get('/produk', function () {
 });
 
 Route::get('/produk/tambah', function () {
-    return view('formtambahproduk');
+    $jenisProduk = ['Handphone', 'Aksesoris', 'Sparepart', 'Kartu Perdana'];
+    return view('formtambahproduk', ['jenisProduk' => $jenisProduk]);
 });
+
